@@ -1,0 +1,8 @@
+{% include 'partials/header.html' %}
+<ul>
+    {% for sm in sm %}
+
+    <li><a href="/ScheduledMail/details/{{sm.id}}">{{sm.subject}}</a> : {{sm.setDelivery}}</li>
+    {% endfor %}
+</ul>
+{% include 'partials/footer.html' %}

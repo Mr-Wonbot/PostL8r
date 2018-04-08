@@ -1,0 +1,24 @@
+{% include 'partials/header.html' %}
+<form action="{% url 'compose' %}" method="post">
+{% csrf_token %}
+    <label for="recipient">Recipient</label><br />
+    <input type="text" name="recipient" id="recipient" />
+    <br>
+    <label for="sender">Sender</label><br />
+    <input type="text" name="sender" id="sender" />
+    <br>
+    <label for="subject">Subject</label><br />
+    <input type="text" name="subject" id="subject" />
+    <br>
+    <label for="message">Message</label><br />
+    <input type="text" name="message" id="message" />
+    <br>
+    <label for="setDelivery">Set Delivery</label><br />
+    <input type="datetime-local" name="setDelivery" id="setDelivery" />
+    <br><br>
+    <input type="submit" value="Send" />
+</form>
+<br>
+<a href = "/">Go Back</a>
+
+{% include 'partials/footer.html' %}
